@@ -1,0 +1,32 @@
+.intro-section {
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 60%;
+  }
+  &__text {
+    max-width: 400px;
+    margin-right: 88px;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__paragraph {
+    text-align: left;
+  }
+
+  &__card {
+    width: 400px;
+
+    &-image {
+      border-radius: 8px;
+    }
+  }
+}
