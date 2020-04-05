@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout/Layout"
+import HeroSection from "../components/HeroSection"
 
 export const query = graphql`
   query MyQuery {
@@ -13,17 +14,24 @@ export const query = graphql`
         }
       }
     }
+    heroImage: file(id: { eq: "4291cbdc-e69b-5539-9a84-f08ab22d96c2" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
 const IndexPage = ({ data }) => {
-  console.log(process.env.ENABLE_GATSBY_REFRESH_ENDPOINT)
   const displayArticles = data.allStrapiArticle.edges.map(article => {
     return <p key={article.node.Title}>{article.node.Title}</p>
   })
+  console.log("data", data)
   return (
     <Layout>
-      <h1>hiiiiiiii</h1>
+      <HeroSection heroImage={data.heroImage.childImageSharp.fluid} />
       {displayArticles}
     </Layout>
   )
