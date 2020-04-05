@@ -1,4 +1,47 @@
 .people-section {
+  display: flex;
+  justify-content: center;
+
   background-color: #f6f6f6;
-  height: 600px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+  }
+
+  &__name-card {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 330px;
+    height: 450px;
+    margin-top: 128px;
+    margin-bottom: 96px;
+  }
+
+  &__name {
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    top: -50px;
+    left: 15px;
+
+    width: 300px;
+
+    border-radius: 8px;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 8px;
+  }
 }
