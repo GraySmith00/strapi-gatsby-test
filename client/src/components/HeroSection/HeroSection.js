@@ -1,6 +1,6 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
-import logo from "../../images/transparentLogo.png"
+import logo from "../../images/newLogo.png"
 
 import "./HeroSection.scss"
 
@@ -13,7 +13,7 @@ const HeroSection = ({ heroImage }) => {
         fluid={heroImage}
         backgroundColor={`#040e18`}
       >
-        <div className="hero-section__overlay"></div>
+        {/* <div className="hero-section__overlay"></div> */}
         <img src={logo} className="hero-section__logo" />
       </BackgroundImage>
     </div>

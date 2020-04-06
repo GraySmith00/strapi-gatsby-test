@@ -27,6 +27,11 @@
     margin: 0;
   }
 
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
   &__nav ul {
     display: flex;
     align-items: center;
